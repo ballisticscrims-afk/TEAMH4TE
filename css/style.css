@@ -90,3 +90,9 @@ nav input {
   cursor: pointer;
   margin-top: 15px;
 }
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: -1;
+}
