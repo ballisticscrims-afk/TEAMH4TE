@@ -58,10 +58,14 @@ nav input {
 }
 
 /* CARDS */
-.card-grid {
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
 .card {
   background: #7b3fe4;
   padding: 20px;
