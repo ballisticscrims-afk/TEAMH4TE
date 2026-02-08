@@ -62,23 +62,27 @@ nav input {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-}
-
 .card {
-  background: rgba(0,0,0,0.7);
-  padding: 15px;
-  border-radius: 10px;
+  background: #7b3fe4;
+  padding: 20px;
+  border-radius: 16px;
   text-align: center;
-  transition: 0.3s;
+  box-shadow:
+    0 0 0 3px #c77dff,
+    0 10px 30px rgba(0,0,0,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow:
+    0 0 0 3px #ff7bff,
+    0 20px 40px rgba(0,0,0,0.8);
 }
 
 .card img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 /* BUTTON */
