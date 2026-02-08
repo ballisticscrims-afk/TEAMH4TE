@@ -104,3 +104,8 @@ nav input {
   background: rgba(0,0,0,0.45);
   z-index: -1;
 }
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
