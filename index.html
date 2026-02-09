@@ -12,7 +12,7 @@
 
 </video>
 
-<nav class="navbar">
+  <nav class="navbar">
   <div class="nav-left">
     <a href="index.html" class="logo">ORG</a>
     <a href="roster.html">Roster</a>
@@ -23,10 +23,19 @@
   </div>
 
   <div class="nav-right">
-    <button class="icon-btn" id="search-btn">🔍</button>
-    <a href="login.html" class="icon-btn">👤</a>
+    <div class="search-wrapper">
+      <button class="icon-btn" id="search-toggle">
+        <img src="assets/icons/search.svg">
+      </button>
+      <input type="text" id="search-input" placeholder="Search">
+    </div>
+
+    <a href="login.html" class="icon-btn">
+      <img src="assets/icons/user.svg">
+    </a>
   </div>
 </nav>
+
 
 
 <div class="container">
