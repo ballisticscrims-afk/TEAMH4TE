@@ -80,6 +80,16 @@ body {
 .navbar .logo {
   color: #ffffff !important;
 }
+.navbar a {
+  text-decoration: none;
+  line-height: 1;
+}
+.navbar a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
 
 
 
