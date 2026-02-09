@@ -93,6 +93,30 @@ body {
   color: #c77dff;
 }
 
+.navbar a.active {
+  color: #c77dff;
+  opacity: 1;
+}
+.navbar.shrink {
+  height: 44px;
+  background: rgba(0,0,0,0.85);
+}
+
+@keyframes neonGlow {
+  0% { text-shadow: 0 0 6px #c77dff; }
+  50% { text-shadow: 0 0 12px #ff7bff; }
+  100% { text-shadow: 0 0 6px #c77dff; }
+}
+
+.logo {
+  animation: neonGlow 3s infinite alternate;
+}
+.icon-btn img {
+  width: 16px;
+  height: 16px;
+  filter: invert(1);
+}
+
 /* Icon buttons (search / login) */
 .icon-btn {
   width: 28px;
