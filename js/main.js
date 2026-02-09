@@ -1,10 +1,17 @@
 // SEARCH TOGGLE
 const searchToggle = document.getElementById("search-toggle");
-const searchWrapper = document.querySelector(".search-wrapper");
+const searchDropdown = document.querySelector(".search-dropdown");
 
-searchToggle.addEventListener("click", () => {
-  searchWrapper.classList.toggle("active");
+searchToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  searchDropdown.classList.toggle("active");
 });
+
+// Close when clicking outside
+document.addEventListener("click", () => {
+  searchDropdown.classList.remove("active");
+});
+
 
 // ACTIVE PAGE HIGHLIGHT
 document.querySelectorAll(".navbar a").forEach(link => {
