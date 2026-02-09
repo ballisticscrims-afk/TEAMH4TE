@@ -1,16 +1,42 @@
+/* =========================
+   GLOBAL RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  background: #0b0b0f;
-  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0a0a0f;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
-/* NAV BAR */
+/* =========================
+   VIDEO BACKGROUND
+========================= */
+.video-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark overlay for readability */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+/* =========================
+   NAVBAR (CLEAN & SMALL)
+========================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -19,40 +45,55 @@ body {
   padding: 0 24px;
   display: flex;
   align-items: center;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
   z-index: 1000;
 }
 
-/* LEFT SIDE */
+/* Left side links */
 .nav-left {
   display: flex;
   align-items: center;
   gap: 18px;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-}
-
-/* RIGHT SIDE — THIS IS THE KEY */
+/* Force right alignment */
 .nav-right {
   margin-left: auto;
   display: flex;
   align-items: center;
   gap: 14px;
 }
+
+/* Logo */
+.logo {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Nav links */
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  line-height: 1;
+  opacity: 0.85;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.navbar a:hover {
+  opacity: 1;
+  color: #c77dff;
+}
+
+/* Icon buttons (search / login) */
 .icon-btn {
   width: 28px;
   height: 28px;
@@ -61,9 +102,9 @@ body {
   justify-content: center;
   background: transparent;
   border: none;
-  color: white;
-  font-size: 14px;
   cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
   opacity: 0.85;
   transition: opacity 0.2s, transform 0.2s;
 }
@@ -72,107 +113,21 @@ body {
   opacity: 1;
   transform: scale(1.1);
 }
-@media (max-width: 900px) {
-  .nav-left a:not(.logo) {
-    display: none;
-  }
-.navbar a,
-.navbar .logo {
-  color: #ffffff !important;
-}
-.navbar a {
-  text-decoration: none;
-  line-height: 1;
-}
-.navbar a {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-}
 
-
-
-
-/* VIDEO BACKGROUND */
-.video-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-/* PAGE CONTAINER */
+/* =========================
+   PAGE CONTENT
+========================= */
 .container {
   padding: 120px 40px 40px;
 }
 
-/* CARDS */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  max-width: 1200px;
-  margin: 40px auto;
-}
-
-.card {
-  background: #7b3fe4;
-  padding: 20px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow:
-    0 0 0 3px #c77dff,
-    0 10px 30px rgba(0,0,0,0.6);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow:
-    0 0 0 3px #ff7bff,
-    0 20px 40px rgba(0,0,0,0.8);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-/* BUTTON */
-.btn {
-  padding: 12px 25px;
-  background: red;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 15px;
-}
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  z-index: -1;
-}
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-.hero-title {
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 30px;
+h1, h2 {
+  margin-bottom: 20px;
   text-transform: uppercase;
-}
-
-.btn {
-  background: red;
-  padding: 14px 40px;
-  border-radius: 6px;
-  font-size: 16px;
   letter-spacing: 1px;
 }
+
+/* =========================
+   GRID & CARDS
+========================= */
+.grid {
