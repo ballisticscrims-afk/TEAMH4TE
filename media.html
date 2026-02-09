@@ -9,18 +9,31 @@
 <video class="video-bg" autoplay muted loop>
   <source src="assets/videos/media.mp4">
 </video>
-  <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="roster.html">Roster</a></li>
-    <li><a href="media.html">Media</a></li>
-    <li><a href="socials.html">Socials</a></li>
-    <li><a href="join.html">Join</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="login.html">Login</a></li>
-  </ul>
-  <input placeholder="Search">
+
+  <nav class="navbar">
+  <div class="nav-left">
+    <a href="index.html" class="logo">ORG</a>
+    <a href="roster.html">Roster</a>
+    <a href="media.html">Media</a>
+    <a href="socials.html">Socials</a>
+    <a href="join.html">Join</a>
+    <a href="shop.html">Shop</a>
+  </div>
+
+  <div class="nav-right">
+    <div class="search-wrapper">
+      <button class="icon-btn" id="search-toggle">
+        <img src="assets/icons/search.svg">
+      </button>
+      <input type="text" id="search-input" placeholder="Search">
+    </div>
+
+    <a href="login.html" class="icon-btn">
+      <img src="assets/icons/user.svg">
+    </a>
+  </div>
 </nav>
+
 
 <div class="container">
   <h1>Highlights</h1>
