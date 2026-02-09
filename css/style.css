@@ -38,6 +38,31 @@ body {
   align-items: center;
   gap: 14px;
 }
+.icon-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.icon-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+@media (max-width: 900px) {
+  .nav-left a:not(.logo) {
+    display: none;
+  }
+}
+
 
 
 /* VIDEO BACKGROUND */
