@@ -31,6 +31,21 @@ body {
   gap: 18px;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
 /* RIGHT SIDE — THIS IS THE KEY */
 .nav-right {
   margin-left: auto;
@@ -61,7 +76,11 @@ body {
   .nav-left a:not(.logo) {
     display: none;
   }
+.navbar a,
+.navbar .logo {
+  color: #ffffff !important;
 }
+
 
 
 
